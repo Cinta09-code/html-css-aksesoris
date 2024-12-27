@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleBelle</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <div class="nav container">
+        <a href="#" class="logo">LittleBelle.PNK</a>
+        <!-- Menu -->
+        <div class="navbar-menu">
+          <a href="#tentang-toko">About</a>
+          <a href="#kategori">Category</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <!-- icon -->
+        <div class="nav-extra">
+          <a href="#" id="menu-icon"><i class="bx bx-menu"></i></a>
+          <a href="#" id="cart-icon"><i class='bx bxs-cart' ></i></a>
+          <a href="#" id="user-icon"><i class='bx bxs-user-circle' ></i></i></a>
+        </div>
+
+        <!-- cart -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart </h2>
+          <br>
+          <!-- content -->
+          <div class="cart-content">
+            <!-- Cart close -->
+            <i class="bx bx-x-circle" id="close-cart"></i>
+          </div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">Rp0</div>
+            <button type="button" class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login -->
+      <div id="login-menu" class="hidden">
+        <form class="login-form">
+          <h3>Login</h3>
+          <input type="text" id="username" placeholder="Username" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- shop -->
+    <section class="shop container">
+      <!-- Vidio -->
+      <section id="tentang-toko" class="video-section container">
+        <h2 class="section-title">About Our Store</h2>
+        <br />
+        <div class="video-container">
+          <div class="decorative-frame">
+            <video controls autoplay muted loop>
+              <source src="video/vidio.mp4" type="video/mp4" /></video>
+            <p class="video-description">
+              Selamat datang di LittleBelle.PNK! Kami menyediakan koleksi
+              perhiasan berkualitas tinggi, seperti kalung,
+              gelang,tas,kacamata,jam,cincin dan masih banyak lagi lainnya
+              dengan desain eksklusif. Temukan keindahan dalam setiap detail.
+            </p>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+
+      <!-- Catagories -->
+      <section id="kategori" class="categories container">
+        <h2 class="section-title">Select Category</h2>
+        <div class="categories-content">
+          <button class="category-btn" data-category="All">Semua</button>
+          <button class="category-btn" data-category="Kalung">Kalung</button>
+          <button class="category-btn" data-category="Gelang">
+            Gelang dan Jam
+          </button>
+          <button class="category-btn" data-category="Tas">Tas</button>
+          <button class="category-btn" data-category="Aksesoris">
+            Aksesoris
+          </button>
+        </div>
+      </section>
+      <!-- content -->
+      <h2 id="produk" class="section-title">Shop Products</h2>
+      <br />
+      <div class="shop-content">
+        <!-- box 1 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img1.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Box</h2>
+          <span class="price">Rp 62.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 2 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img2.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Kupu 2</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 3 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img3.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Permata kecil</h2>
+          <span class="price">Rp 62.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 4 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img4.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Gelang Serut Titanium Clover Permata</h2>
+          <span class="price">Rp 58.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 5 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img5.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Tokyo Bag</h2>
+          <span class="price">Rp 152.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 6 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img6.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Laura Bag</h2>
+          <span class="price">Rp 145.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 7 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img7.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jennie Bag</h2>
+          <span class="price">Rp 149.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 8 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img8.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Shella Shoulder Bag</h2>
+          <span class="price">Rp 147.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 9 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img9.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Sherly Backpack</h2>
+          <span class="price">Rp 170.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 10 -->
+        <div class="product-box" data-category="Aksesoris">
+          <img src="gambar/img10.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Y2k Bando Headband Rajut</h2>
+          <span class="price">Rp 22.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 11 -->
+        <div class="product-box" data-category="Aksesoris">
+          <img src="gambar/img11.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Bando & Topi Natal</h2>
+          <span class="price">Rp 27.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 12 -->
+        <div class="product-box" data-category="Aksesoris">
+          <img src="gambar/img12.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Bando Fashion Permata</h2>
+          <span class="price">Rp 25.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 13 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img1.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Love</h2>
+          <span class="price">Rp59.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 14 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img14.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Gelang Serut Titanium Clover</h2>
+          <span class="price">Rp 54.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 15 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img15.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Serut 1</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 16 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img16.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Strap</h2>
+          <span class="price">Rp 39.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 17 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img17.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Alice Bag</h2>
+          <span class="price">Rp 170.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 18 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img18.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Irene Bag</h2>
+          <span class="price">Rp 156.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 19 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img19.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Freya Bag</h2>
+          <span class="price">Rp 156.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 20 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img20.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Elissa Sling Bag Tas Selempang Wanita</h2>
+          <span class="price">Rp 139.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 21 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img21.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Rory Backpack</h2>
+          <span class="price">Rp 189.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 22 -->
+        <div class="product-box" data-category="Tas">
+          <img src="gambar/img22.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Vanesh Backpack</h2>
+          <span class="price">Rp 140.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 23 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img23.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Serut</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 24 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img24.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Serut 2</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 25 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img25.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Serut 3</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 26 -->
+        <div class="product-box" data-category="Gelang">
+          <img src="gambar/img26.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Jam Tangan Serut 4</h2>
+          <span class="price">Rp 60.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Kontak Kami</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3>Alamat</h3>
+          <p>Jl. Reformasi Untan Sebrang Indomaret,Pontianak,Indonesia</p>
+        </div>
+        <div class="contact-item">
+          <h3>Jam Operasional</h3>
+          <p>Open Everyday // 10.00-21.00</p>
+        </div>
+      </div>
+    
+      <div class="contact-form">
+        <h3>Hubungi Kami</h3>
+        <form action="#" method="POST">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" placeholder="Masukkan Nama" required />
+          <label for="name">Alamat</label>
+          <input type="text" id="name" name="name" placeholder="Alamat Anda" required />
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" placeholder="Masukkan Pesan" required></textarea>
+    
+          <button type="submit" class="btn-submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Link to JavaScript -->
+    <script src="Script.js"></script>
+  </body>
+</html>
