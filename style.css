@@ -486,7 +486,8 @@ section {
     font-size: 75%;
   }
   .nav {
-    padding: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   section {
     padding: 3rem 0 2rem;
@@ -496,13 +497,14 @@ section {
     width: 90%;
   }
   .shop {
-    margin-top: 2rem !important;
+    margin-top: 3rem !important;
   }
 }
 @media screen and (max-width: 758px) {
   html {
     font-size: 75%;
   }
+
   .category-btn {
     font-size: 0.9em;
     text-align: center;
@@ -533,6 +535,7 @@ section {
   html {
     font-size: 75%;
   }
+ 
   .category-btn {
     font-size: 0.8em;
     padding: 0.5em 0.8em;
@@ -562,7 +565,8 @@ section {
     font-size: 75%;
   }
   .nav {
-    padding: 11px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   .logo {
     font-size: 1rem;
@@ -571,7 +575,7 @@ section {
     width: 320px;
   }
   .shop {
-    margin-top: 1rem !important;
+    margin-top: 4rem !important;
   }
   .cart {
     width: 280px;
