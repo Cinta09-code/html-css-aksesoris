@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>category-littlebelle</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="category.css" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="gambar/logo.ico" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <div class="nav container">
+        <a href="" class="logo">
+          <img src="gambar/logo.png" alt="" />
+        </a>
+        <!-- Menu -->
+        <div class="navbar-menu">
+          <a href="Reg.html">Home</a>
+          <a href="#tentang-toko">About</a>
+          <a href="#kategori">Category</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <!-- icon -->
+        <div class="nav-extra">
+          <a href="#" id="menu-icon"><i class="bx bx-menu"></i></a>
+          <a href="#" id="cart-icon"><i class="bx bxs-cart"></i></a>
+          <a href="#" id="user-icon"><i class="bx bxs-user-circle"></i></a>
+          <a href="#" id="truck-icon"><i class="bx bxs-truck"></i></a>
+        </div>
+
+        <!-- Cart -->
+        <div class="cart">
+          <div class="cart-header">
+            <h2 class="cart-title">🛒 Your Cart</h2>
+            <i class="bx bx-x-circle" id="close-cart"></i>
+          </div>
+          <!-- Content -->
+          <div class="cart-content">
+            <p class="empty-cart-message">
+              Oops! Your cart is empty. Start shopping now! 🛍️
+            </p>
+          </div>
+          <!-- Footer -->
+          <div class="cart-footer">
+            <div class="total">
+              <span class="total-title">Total:</span>
+              <span class="total-price">Rp0</span>
+            </div>
+            <div class="user-details">
+              <label for="user-name">Name:</label>
+              <input
+                type="text"
+                id="user-name"
+                class="user-input"
+                placeholder="Enter your name"
+              />
+
+              <label for="user-address">Address:</label>
+              <textarea
+                id="user-address"
+                class="user-input"
+                placeholder="Enter your address"
+              ></textarea>
+            </div>
+            <div class="payment-method">
+              <label for="payment-method">Select Payment Method:</label>
+              <select id="payment-method" class="payment-select">
+                <option value="credit-card">Credit Card</option>
+                <option value="qris">QRIS</option>
+                <option value="bank-transfer">Bank Transfer</option>
+              </select>
+            </div>
+            <button type="button" class="btn-buy disabled" id="checkout-button">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login -->
+      <div id="login-menu" class="hidden">
+        <form class="login-form">
+          <h3>Login</h3>
+          <input type="text" id="username" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn-login" id="login">Login</button>
+          <!-- Tambahkan link ke halaman register -->
+          <p class="register-link">
+            Tidak punya akun? <a href="Reg.html">Daftar di sini</a>
+          </p>
+        </form>
+      </div>
+
+      <div id="order-status" class="hidden">
+        <div class="order-status-header">
+          <h2 class="order-title">📦 Order Status</h2>
+          <i class="bx bx-x-circle" id="close-order-status"></i>
+        </div>
+        <div class="order-status-content">
+          <p class="order-status-message">
+            Belum ada orderan yang diproses. Mulailah belanja sekarang! 🛒
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="shop container">
+        <section class="product-slider">
+            <h2 class="section-title">Shop Products</h2>
+            <div class="carousel">
+              <!-- box 1 -->
+              <div class="product-box" data-category="Kalung">
+                <img src="gambar/img1.jpg" alt="" class="product-img" />
+                <h2 class="product-title">Kalung Titanium Box</h2>
+                <span class="price">Rp 62.000</span>
+                <i class="bx bxs-shopping-bag add-cart"></i>
+              </div>
+              <!-- box 2 -->
+              <div class="product-box" data-category="Kalung">
+                <img src="gambar/img2.jpg" alt="" class="product-img" />
+                <h2 class="product-title">Kalung Titanium Kupu 2</h2>
+                <span class="price">Rp 60.000</span>
+                <i class="bx bxs-shopping-bag add-cart"></i>
+              </div>
+              <!-- box 3 -->
+              <div class="product-box" data-category="Kalung">
+                <img src="gambar/img3.jpg" alt="" class="product-img" />
+                <h2 class="product-title">Kalung Titanium Permata kecil</h2>
+                <span class="price">Rp 62.000</span>
+                <i class="bx bxs-shopping-bag add-cart"></i>
+              </div>
+              <!-- box 4 -->
+              <div class="product-box" data-category="Gelang">
+                <img src="gambar/img4.jpg" alt="" class="product-img" />
+                <h2 class="product-title">Gelang Serut Titanium Clover Permata</h2>
+                <span class="price">Rp 58.000</span>
+                <i class="bx bxs-shopping-bag add-cart"></i>
+              </div>
+              <!-- box 5 -->
+              <div class="product-box" data-category="Tas">
+                <img src="gambar/img5.jpg" alt="" class="product-img" />
+                <h2 class="product-title">Tokyo Bag</h2>
+                <span class="price">Rp 152.000</span>
+                <i class="bx bxs-shopping-bag add-cart"></i>
+              </div>
+            </div>
+          </section>
+          
+    </section>
+
+    <!-- Link to JavaScript -->
+    <script src="Script.js"></script>
+    <script src="category.js"></script>
+  </body>
+</html>

@@ -11,45 +11,77 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="gambar/logo.ico">
+    <link rel="icon" type="image/x-icon" href="gambar/logo.ico" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <!-- Navbar -->
       <div class="nav container">
-        <a href="#" class="logo">
-          <img src="gambar/logo.png" alt="">
+        <a href="" class="logo">
+          <img src="gambar/logo.png" alt="" />
         </a>
         <!-- Menu -->
         <div class="navbar-menu">
-          <a href="Home">Home</a>
+          <a href="Reg.html">Home</a>
           <a href="#tentang-toko">About</a>
-          <a href="#kategori">Category</a>
+          <a href="category.html">Category</a>
           <a href="#contact">Contact</a>
         </div>
 
         <!-- icon -->
         <div class="nav-extra">
           <a href="#" id="menu-icon"><i class="bx bx-menu"></i></a>
-          <a href="#" id="cart-icon"><i class='bx bxs-cart' ></i></a>
-          <a href="#" id="user-icon"><i class='bx bxs-user-circle' ></i></i></a>
+          <a href="#" id="cart-icon"><i class="bx bxs-cart"></i></a>
+          <a href="#" id="user-icon"><i class="bx bxs-user-circle"></i></a>
+          <a href="#" id="truck-icon"><i class="bx bxs-truck"></i></a>
         </div>
 
-        <!-- cart -->
+        <!-- Cart -->
         <div class="cart">
-          <h2 class="cart-title">Your Cart </h2>
-          <br>
-          <!-- content -->
-          <div class="cart-content">
-            <!-- Cart close -->
+          <div class="cart-header">
+            <h2 class="cart-title">🛒 Your Cart</h2>
             <i class="bx bx-x-circle" id="close-cart"></i>
           </div>
-          <!-- Total -->
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">Rp0</div>
-            <button type="button" class="btn-buy">Buy Now</button>
+          <!-- Content -->
+          <div class="cart-content">
+            <p class="empty-cart-message">
+              Oops! Your cart is empty. Start shopping now! 🛍️
+            </p>
+          </div>
+          <!-- Footer -->
+          <div class="cart-footer">
+            <div class="total">
+              <span class="total-title">Total:</span>
+              <span class="total-price">Rp0</span>
+            </div>
+            <div class="user-details">
+              <label for="user-name">Name:</label>
+              <input
+                type="text"
+                id="user-name"
+                class="user-input"
+                placeholder="Enter your name"
+              />
+
+              <label for="user-address">Address:</label>
+              <textarea
+                id="user-address"
+                class="user-input"
+                placeholder="Enter your address"
+              ></textarea>
+            </div>
+            <div class="payment-method">
+              <label for="payment-method">Select Payment Method:</label>
+              <select id="payment-method" class="payment-select">
+                <option value="credit-card">Credit Card</option>
+                <option value="qris">QRIS</option>
+                <option value="bank-transfer">Bank Transfer</option>
+              </select>
+            </div>
+            <button type="button" class="btn-buy disabled" id="checkout-button">
+              Checkout
+            </button>
           </div>
         </div>
       </div>
@@ -57,14 +89,33 @@
       <!-- Login -->
       <div id="login-menu" class="hidden">
         <form class="login-form">
-            <h3>Login</h3>
-            <input type="text" id="username" placeholder="Username" required />
-            <input type="password" id="password" placeholder="Password" required />
-            <button type="submit" class="btn-login" id="login">Login</button>
-            <!-- Tambahkan link ke halaman register -->
-            <p class="register-link">Tidak punya akun? <a href="register.html">Daftar di sini</a></p>
+          <h3>Login</h3>
+          <input type="text" id="username" placeholder="Username" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn-login" id="login">Login</button>
+          <!-- Tambahkan link ke halaman register -->
+          <p class="register-link">
+            Tidak punya akun? <a href="Reg.html">Daftar di sini</a>
+          </p>
         </form>
-    </div>
+      </div>
+
+      <div id="order-status" class="hidden">
+        <div class="order-status-header">
+          <h2 class="order-title">📦 Order Status</h2>
+          <i class="bx bx-x-circle" id="close-order-status"></i>
+        </div>
+        <div class="order-status-content">
+          <p class="order-status-message">
+            Belum ada orderan yang diproses. Mulailah belanja sekarang! 🛒
+          </p>
+        </div>
+      </div>
     </header>
 
     <!-- shop -->
@@ -76,7 +127,8 @@
         <div class="video-container">
           <div class="decorative-frame">
             <video controls autoplay muted loop>
-              <source src="video/vidio.mp4" type="video/mp4" /></video>
+              <source src="video/vidio.mp4" type="video/mp4" />
+            </video>
             <p class="video-description">
               Selamat datang di LittleBelle.PNK! Kami menyediakan koleksi
               perhiasan berkualitas tinggi, seperti kalung,
@@ -90,7 +142,7 @@
       <br />
 
       <!-- Catagories -->
-      <section id="kategori" class="categories container">
+      <section class="categories container">
         <h2 class="section-title">Select Category</h2>
         <div class="categories-content">
           <button class="category-btn" data-category="All">Semua</button>
@@ -105,7 +157,7 @@
         </div>
       </section>
       <!-- content -->
-      <h2 id="produk" class="section-title">Shop Products</h2>
+      <h2 class="section-title">Shop Products</h2>
       <br />
       <div class="shop-content">
         <!-- box 1 -->
@@ -306,17 +358,34 @@
           <p>Open Everyday // 10.00-21.00</p>
         </div>
       </div>
-    
+
       <div class="contact-form">
         <h3>Hubungi Kami</h3>
         <form action="#" method="POST">
           <label for="name">Nama</label>
-          <input type="text" id="name" name="name" placeholder="Masukkan Nama" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukkan Nama"
+            required
+          />
           <label for="name">Alamat</label>
-          <input type="text" id="name" name="name" placeholder="Alamat Anda" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Alamat Anda"
+            required
+          />
           <label for="message">Pesan</label>
-          <textarea id="message" name="message" placeholder="Masukkan Pesan" required></textarea>
-    
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Masukkan Pesan"
+            required
+          ></textarea>
+
           <button type="submit" class="btn-submit">Kirim Pesan</button>
         </form>
       </div>
