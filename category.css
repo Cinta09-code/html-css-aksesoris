@@ -52,7 +52,6 @@ header {
   max-width: 1068px;
   margin: auto;
   width: 100%;
-  overflow: hidden;
 }
 .categories-content {
   display: flex;
@@ -62,7 +61,6 @@ header {
 }
 section {
   padding: 4rem 0 3rem;
-  margin-top: 20px;
 }
 .video-section {
   text-align: center;
@@ -322,7 +320,6 @@ textarea.user-input {
 .total-title {
   font-size: 1rem;
   font-weight: 600;
-  
 }
 .total-price {
   margin-left: 0.5rem;
@@ -379,13 +376,17 @@ textarea.user-input {
   transform: scale(1.05);
 }
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  margin: 10px 0; /* Sesuaikan margin atas dan bawah */
-  padding: 15px;
-  margin-bottom: 10px; /* Atur margin bawah agar lebih dekat */
-  padding-bottom: 0;   
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding: 10px; /* Memberikan ruang kiri dan kanan */
+  width: 100%; /* Pastikan lebar judul 100% dari container */
+  box-sizing: border-box; /* Agar padding tidak menambah lebar */
+  white-space: normal;
+  padding-top:0;
+  
 }
 #login-menu {
   position: absolute;
@@ -480,7 +481,7 @@ textarea.user-input {
 }
 
 /* shop content */
-.shop.container {
+.shop-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   gap: 1.5rem;
@@ -489,38 +490,46 @@ textarea.user-input {
 
 .product-box {
   position: relative;
-  flex: 0 0 auto;
-  width: 250px; /* Lebar tetap untuk setiap produk */
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk elemen produk */
-  padding: 10px;
-  transition: transform 0.3s ease-in-out;
   border-radius: 5px;
+  border-radius: 4px;
+  flex: 0 0 auto; /* Prevents items from shrinking or stretching */
+  width: 200px; /* Set a fixed width for the product box */
+  box-sizing: border-box;
 }
 .product-box:hover {
   padding: 10px;
   border: 1px solid var(--text-color);
   transition: 0.4s;
   border-radius: 4px;
-  transform: scale(1.05);
 }
 .product-img {
-  width: 50%;
+  width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
+
 .product-title {
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  
 }
 .price {
   font-weight: 500;
-  color: var(--main-color);
+  text-align: center;
+  font-size: 14px;
+  margin: 5px 0;
 }
+.container-items{
+  border-radius: 10px;
+  border:  2px solid var(--text-color);
+  padding-top: 1px;
+  padding-bottom: 0;
+  background-color: #f1a79f;
+}
+
+/* Media untuk layar lebih besar (misalnya desktop) */
 @media (max-width: 1080px) {
   html {
     font-size: 75%;
@@ -538,16 +547,23 @@ textarea.user-input {
   }
   .shop {
     margin-top: 3rem !important;
+    
+  }
+  .section-title {
+    margin-top: 110px;
+    margin-bottom: 0.1rem; /* Perbaikan sintaks */
+    padding: 10px; /* Menambahkan padding untuk spasi */
+    width: 100%;
+    padding-top:0;
   }
 }
-@media screen and (max-width: 758px) {
+@media screen and (max-width: 868px) {
   html {
     font-size: 75%;
   }
   * {
     scroll-padding-top: 8rem;
   }
-
   .category-btn {
     font-size: 0.9em;
     text-align: center;
@@ -576,13 +592,72 @@ textarea.user-input {
     width: 200px;
     padding: 15px;
   }
+  .section-title {
+    font-size: 1.5rem; /* Sesuaikan ukuran font */
+    margin-top: 2rem;
+    padding-top:0;
+  }
+  .shop {
+    margin-top: 3rem !important;
+  }
 }
 
+/* Media untuk layar lebih kecil (tablet) */
+@media screen and (max-width: 758px) {
+  html {
+    font-size: 75%;
+  }
+  * {
+    scroll-padding-top: 8rem;
+  }
+  
+  .category-btn {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.6em 1em;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  .navbar-menu.active {
+    display: flex;
+  }
+  #menu-icon {
+    display: inline-block;
+  }
+  .cart {
+    width: 200px;
+    padding: 15px;
+  }
+  .section-title {
+    font-size: 1.5rem; /* Sesuaikan ukuran font */
+    margin-top: 2rem;
+    padding-top:0;
+  }
+  .shop {
+    margin-top: 3rem !important;
+  }
+}
+
+/* Media untuk layar lebih kecil (ponsel/tablet kecil) */
 @media screen and (max-width: 480px) {
   html {
     font-size: 75%;
   }
-
+  .section-title {
+    font-size: 20px;
+    padding-top:0;
+  }
   .category-btn {
     font-size: 0.8em;
     padding: 0.5em 0.8em;
@@ -610,7 +685,12 @@ textarea.user-input {
     width: 180px;
     padding: 10px;
   }
+  .shop {
+    margin-top: 2rem !important;
+  }
 }
+
+/* Media untuk layar ponsel sangat kecil */
 @media (max-width: 400px) {
   html {
     font-size: 75%;
@@ -623,15 +703,16 @@ textarea.user-input {
     font-size: 1rem;
   }
   .cart {
-    width: 320px;
+    width: 280px; /* Diperbaiki, sudah ada duplikasi di bawah */
   }
   .shop {
-    margin-top: 4rem !important;
+    margin-top: 3rem !important;
   }
-  .cart {
-    width: 280px;
+  .section-title {
+    margin-top: 30px;
   }
 }
+
 /* Order Section */
 .order-processing {
   background-color: var(--bg-color);
@@ -678,35 +759,121 @@ textarea.user-input {
   margin: 5px 0;
 }
 
-
 .product-slider {
-    width: 100%;
-    overflow-x: auto; /* Memungkinkan scroll horizontal */
-    margin-top: 0;
-    position: relative;
-    scrollbar-width: none;
-    margin-top: 0; /* Mengurangi jarak atas produk slider */
-    padding-top: 0; /* Pastikan padding atas tidak besar */
-  }
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none;
+  border: 2px solid var(--text-color);
+}
+
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+}
+
+/* Section container */
+.top-products {
+  background-color: #f1a79f;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 2rem;
+  height: auto; /* Pastikan height tidak terbatas */
   
-  /* Carousel wrapper untuk meletakkan produk dalam satu baris */
-  .carousel {
-    display: flex;
-    gap: 15px; /* Jarak antar produk */
-    padding-bottom: 20px; /* Padding di bawah carousel untuk elemen */
-  }
-  
-  /* Menambahkan scrollbars yang halus */
-  .product-slider::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .product-slider::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-  }
-  
-  .product-slider::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
-  }
-  
+}
+
+/* Section title */
+.section-title {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: bold;
+
+}
+
+/* Product list */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: visible;
+}
+
+/* Product item */
+.product-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff6f0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Product rank badge */
+.product-rank {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #6a0e0e;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Product image */
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+/* Product info */
+.product-info {
+  text-align: left;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-sold {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #d00000;
+  font-weight: bold;
+}
+
+/* View all button */
+.view-all {
+  margin-top: 1.5rem;
+  background-color: #d00000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

@@ -472,39 +472,6 @@ textarea.user-input {
   color: #555;
 }
 
-/* shop content */
-.shop-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-  gap: 1.5rem;
-  border-radius: 4px;
-}
-
-.product-box {
-  position: relative;
-  border-radius: 5px;
-  border-radius: 4px;
-}
-.product-box:hover {
-  padding: 10px;
-  border: 1px solid var(--text-color);
-  transition: 0.4s;
-  border-radius: 4px;
-}
-.product-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-.product-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.price {
-  font-weight: 500;
-}
 /* Kontak */
 .contact {
   padding: 40px 0;
@@ -592,6 +559,40 @@ textarea.user-input {
 
 .contact-form .btn-submit:hover {
   background-color: var(--text-color);
+}
+/* shop content */
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+  border-radius: 4px;
+}
+
+.product-box {
+  position: relative;
+  border-radius: 5px;
+  border-radius: 4px;
+}
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-weight: 500;
 }
 
 @media (max-width: 1080px) {
@@ -750,4 +751,3 @@ textarea.user-input {
   color: #555;
   margin: 5px 0;
 }
-
