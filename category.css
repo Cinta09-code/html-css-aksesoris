@@ -385,8 +385,7 @@ textarea.user-input {
   width: 100%; /* Pastikan lebar judul 100% dari container */
   box-sizing: border-box; /* Agar padding tidak menambah lebar */
   white-space: normal;
-  padding-top:0;
-  
+  padding-top: 0;
 }
 #login-menu {
   position: absolute;
@@ -483,7 +482,7 @@ textarea.user-input {
 /* shop content */
 .shop-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   border-radius: 4px;
 }
@@ -491,9 +490,8 @@ textarea.user-input {
 .product-box {
   position: relative;
   border-radius: 5px;
-  border-radius: 4px;
-  flex: 0 0 auto; /* Prevents items from shrinking or stretching */
-  width: 200px; /* Set a fixed width for the product box */
+  flex: 0 0 auto;
+  width: 100%;
   box-sizing: border-box;
 }
 .product-box:hover {
@@ -521,12 +519,11 @@ textarea.user-input {
   font-size: 14px;
   margin: 5px 0;
 }
-.container-items{
+.container-items {
   border-radius: 10px;
-  border:  2px solid var(--text-color);
+  border: 2px solid var(--text-color);
   padding-top: 1px;
-  padding-bottom: 0;
-  background-color: #f1a79f;
+  background-image: url("gambar/bg.jpg");
 }
 
 /* Media untuk layar lebih besar (misalnya desktop) */
@@ -547,14 +544,16 @@ textarea.user-input {
   }
   .shop {
     margin-top: 3rem !important;
-    
   }
   .section-title {
     margin-top: 110px;
     margin-bottom: 0.1rem; /* Perbaikan sintaks */
     padding: 10px; /* Menambahkan padding untuk spasi */
     width: 100%;
-    padding-top:0;
+    padding-top: 0;
+  }
+  .product-box {
+    width: 100%;
   }
 }
 @media screen and (max-width: 868px) {
@@ -595,7 +594,7 @@ textarea.user-input {
   .section-title {
     font-size: 1.5rem; /* Sesuaikan ukuran font */
     margin-top: 2rem;
-    padding-top:0;
+    padding-top: 0;
   }
   .shop {
     margin-top: 3rem !important;
@@ -610,11 +609,14 @@ textarea.user-input {
   * {
     scroll-padding-top: 8rem;
   }
-  
   .category-btn {
     font-size: 0.9em;
     text-align: center;
     padding: 0.6em 1em;
+  }
+  .product-special{
+    width: 100px;
+    align-items: center;
   }
   .navbar-menu {
     display: none;
@@ -642,7 +644,7 @@ textarea.user-input {
   .section-title {
     font-size: 1.5rem; /* Sesuaikan ukuran font */
     margin-top: 2rem;
-    padding-top:0;
+    padding-top: 0;
   }
   .shop {
     margin-top: 3rem !important;
@@ -656,7 +658,7 @@ textarea.user-input {
   }
   .section-title {
     font-size: 20px;
-    padding-top:0;
+    padding-top: 0;
   }
   .category-btn {
     font-size: 0.8em;
@@ -766,22 +768,19 @@ textarea.user-input {
   padding: 20px;
   background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
   padding: 2rem 1rem;
-  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   scrollbar-width: none;
-  border: 2px solid var(--text-color);
 }
-
 
 .carousel {
   display: flex;
-  gap: 20px;
-  width: 80%;
+  gap: 60px;
+  width: 20%;
 }
 
 /* Section container */
 .top-products {
-  background-color: #f1a79f;
+  background-image: url(gambar/bg3.jpg);
   padding: 1rem;
   border-radius: 15px;
   border: 2px solid var(--text-color);
@@ -789,7 +788,6 @@ textarea.user-input {
   text-align: center;
   margin-top: 2rem;
   height: auto; /* Pastikan height tidak terbatas */
-  
 }
 
 /* Section title */
@@ -797,7 +795,6 @@ textarea.user-input {
   font-size: 2rem;
   color: var(--text-color);
   font-weight: bold;
-
 }
 
 /* Product list */
@@ -817,6 +814,7 @@ textarea.user-input {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
+  border: 1px solid var(--text-color);
 }
 
 /* Product rank badge */
@@ -861,19 +859,6 @@ textarea.user-input {
 
 .product-price {
   font-size: 1.1rem;
-  color: #d00000;
-  font-weight: bold;
-}
-
-/* View all button */
-.view-all {
-  margin-top: 1.5rem;
-  background-color: #d00000;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: var(--text-color);
+  font-weight: 500;
 }

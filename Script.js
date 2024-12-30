@@ -249,4 +249,5 @@ function ready() {
     document.getElementsByClassName("total-price")[0].innerText =
       "Rp" + total.toLocaleString("id-ID");
   }
+  
 }
