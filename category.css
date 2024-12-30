@@ -705,7 +705,7 @@ textarea.user-input {
     font-size: 1rem;
   }
   .cart {
-    width: 280px; /* Diperbaiki, sudah ada duplikasi di bawah */
+    width: 280px;
   }
   .shop {
     margin-top: 3rem !important;
@@ -714,7 +714,9 @@ textarea.user-input {
     margin-top: 30px;
   }
 }
-
+.special-natal {
+  display: block !important;
+}
 /* Order Section */
 .order-processing {
   background-color: var(--bg-color);

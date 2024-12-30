@@ -223,6 +223,7 @@ function ready() {
     button.addEventListener("click", () => {
       const category = button.dataset.category;
       productBoxes.forEach((product) => {
+        
         if (category === "All" || product.dataset.category === category) {
           product.style.display = "block";
         } else {
@@ -231,6 +232,7 @@ function ready() {
       });
     });
   });
+
   //Update total
   function updatetotal() {
     var cartContent = document.getElementsByClassName("cart-content")[0];
