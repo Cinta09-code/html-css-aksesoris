@@ -160,6 +160,8 @@ function ready() {
         productBoxes[0].remove();
       }
       updatetotal();
+      // Pindah ke halaman ringkasan order
+  window.location.href = "order.html";
     });
   //Quantity Changes
   function quantityChanged(event) {
@@ -196,6 +198,7 @@ function ready() {
       var buttonClicked = event.target;
       buttonClicked.parentElement.remove();
       updatetotal();
+      
     }
     var cartBoxContent = `
                     <img src="${productImg}" alt="" class="cart-img" />
@@ -251,3 +254,6 @@ function ready() {
   }
   
 }
+
+
+

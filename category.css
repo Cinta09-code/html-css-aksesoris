@@ -862,3 +862,50 @@ textarea.user-input {
   color: var(--text-color);
   font-weight: 500;
 }
+/* Footer */
+.footer {
+  border-top: 2px solid var(--shadow-color);
+  color: var(--text-color);
+  padding: 20px 10px;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer .footer-item {
+  width: 30%;
+}
+
+.footer .footer-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer .footer-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footer-item ul li {
+  margin: 5px 0;
+}
+
+.footer .footer-item a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer .footer-item a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}

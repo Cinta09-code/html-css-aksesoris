@@ -4,8 +4,14 @@
     box-sizing: border-box;
   }
   
+:root {
+  --main-color: #c75b7a;
+  --text-color: #921a40;
+  --bg-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Poppins" sans-serif;
     background-color: #f0f8ff;
     display: flex;
     justify-content: center;
@@ -14,60 +20,45 @@
   }
   
   .container {
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
   }
   
   header h1 {
     font-size: 2em;
-    color: #ff69b4;
+    color:var(--text-color);
     text-align: center;
   }
   
   header p {
     text-align: center;
-    color: #888;
+    color: gray;
     font-size: 1.1em;
-  }
-  
-  .order-details {
-    margin-top: 20px;
-  }
-  
-  .order-item {
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .order-item p {
-    margin: 5px 0;
-  }
-  
-  strong {
-    color: #ff69b4;
-  }
-  
+  }  
   .back-btn {
     width: 100%;
     padding: 12px;
-    background-color: #ff69b4;
+    background-color: var(--text-color);
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
+    font-weight: 500;
   }
   
   .back-btn:hover {
-    background-color: #ff1493;
+    background-color: var(--main-color);
   }
-  
+  @media screen and (max-width: 758px) {
+    html {
+      font-size: 75%;
+      margin: 30px;
+    }
+  }
