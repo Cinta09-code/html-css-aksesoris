@@ -60,7 +60,7 @@ header {
   margin-bottom: 2rem;
 }
 section {
-  padding: 4rem 0 3rem;
+  padding: 4rem 0 2rem;
 }
 .video-section {
   text-align: center;
@@ -525,6 +525,12 @@ textarea.user-input {
   padding-top: 1px;
   background-image: url("gambar/bg.jpg");
 }
+.container-items1 {
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+  padding-top: 1px;
+  background-image: url("gambar/bg2.jpg");
+}
 
 /* Media untuk layar lebih besar (misalnya desktop) */
 @media (max-width: 1080px) {
@@ -541,9 +547,6 @@ textarea.user-input {
   .container {
     margin: 0 auto;
     width: 90%;
-  }
-  .shop {
-    margin-top: 3rem !important;
   }
   .section-title {
     margin-top: 110px;
@@ -609,14 +612,28 @@ textarea.user-input {
   * {
     scroll-padding-top: 8rem;
   }
+  
   .category-btn {
     font-size: 0.9em;
     text-align: center;
     padding: 0.6em 1em;
   }
+  .top-products{
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+.product-container{
+  padding-top: 95px;
+}
   .product-special{
     width: 100px;
     align-items: center;
+  }
+  .container {
+    margin: auto;
+    width:100%;
+    padding:30px;
   }
   .navbar-menu {
     display: none;
@@ -645,73 +662,6 @@ textarea.user-input {
     font-size: 1.5rem; /* Sesuaikan ukuran font */
     margin-top: 2rem;
     padding-top: 0;
-  }
-  .shop {
-    margin-top: 3rem !important;
-  }
-}
-
-/* Media untuk layar lebih kecil (ponsel/tablet kecil) */
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 75%;
-  }
-  .section-title {
-    font-size: 20px;
-    padding-top: 0;
-  }
-  .category-btn {
-    font-size: 0.8em;
-    padding: 0.5em 0.8em;
-  }
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    padding: 10px;
-    z-index: 1000;
-  }
-  .navbar-menu.active {
-    display: flex;
-  }
-  #menu-icon {
-    display: inline-block;
-  }
-  .cart {
-    width: 180px;
-    padding: 10px;
-  }
-  .shop {
-    margin-top: 2rem !important;
-  }
-}
-
-/* Media untuk layar ponsel sangat kecil */
-@media (max-width: 400px) {
-  html {
-    font-size: 75%;
-  }
-  .nav {
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  .logo {
-    font-size: 1rem;
-  }
-  .cart {
-    width: 280px;
-  }
-  .shop {
-    margin-top: 3rem !important;
-  }
-  .section-title {
-    margin-top: 30px;
   }
 }
 .special-natal {
@@ -773,6 +723,16 @@ textarea.user-input {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   scrollbar-width: none;
 }
+.product-slider1 {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #a08e87, #a08572);
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none;
+}
 
 .carousel {
   display: flex;
@@ -788,7 +748,7 @@ textarea.user-input {
   border: 2px solid var(--text-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   height: auto; /* Pastikan height tidak terbatas */
 }
 

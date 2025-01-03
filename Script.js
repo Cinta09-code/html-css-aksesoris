@@ -17,6 +17,13 @@ const checkoutButton = document.getElementById("checkout-button");
 const paymentMethod = document.getElementById("payment-method");
 const userName = document.getElementById("user-name");
 const userAddress = document.getElementById("user-address");
+const slider = document.getElementById('slider');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.gambar img'); // Semua gambar
+const totalSlides = slides.length; // Total gambar
 
 // Open cart
 cartIcon.onclick = () => {
@@ -44,7 +51,22 @@ if (document.readyState == "loading") {
 } else {
   ready();
 }
+// Fungsi untuk mengubah posisi slider
+function updateSliderPosition() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
+// Tombol navigasi Next
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSliderPosition();
+});
+
+// Tombol navigasi Prev
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSliderPosition();
+});
 function updateCart() {
   if (cart.length === 0) {
     cartItems.classList.add("hidden");
@@ -161,7 +183,7 @@ function ready() {
       }
       updatetotal();
       // Pindah ke halaman ringkasan order
-  window.location.href = "order.html";
+      window.location.href = "order.html";
     });
   //Quantity Changes
   function quantityChanged(event) {
@@ -198,7 +220,6 @@ function ready() {
       var buttonClicked = event.target;
       buttonClicked.parentElement.remove();
       updatetotal();
-      
     }
     var cartBoxContent = `
                     <img src="${productImg}" alt="" class="cart-img" />
@@ -223,7 +244,6 @@ function ready() {
     button.addEventListener("click", () => {
       const category = button.dataset.category;
       productBoxes.forEach((product) => {
-        
         if (category === "All" || product.dataset.category === category) {
           product.style.display = "block";
         } else {
@@ -254,8 +274,4 @@ function ready() {
     document.getElementsByClassName("total-price")[0].innerText =
       "Rp" + total.toLocaleString("id-ID");
   }
-  
 }
-
-
-
