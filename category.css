@@ -612,28 +612,28 @@ textarea.user-input {
   * {
     scroll-padding-top: 8rem;
   }
-  
+
   .category-btn {
     font-size: 0.9em;
     text-align: center;
     padding: 0.6em 1em;
   }
-  .top-products{
+  .top-products {
     max-width: 100%;
     padding: 20px;
     margin: auto;
   }
-.product-container{
-  padding-top: 95px;
-}
-  .product-special{
+  .product-container {
+    padding-top: 80px;
+  }
+  .product-special {
     width: 100px;
     align-items: center;
   }
   .container {
     margin: auto;
-    width:100%;
-    padding:30px;
+    width: 100%;
+    padding: 30px;
   }
   .navbar-menu {
     display: none;
