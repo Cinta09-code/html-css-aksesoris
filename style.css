@@ -199,6 +199,7 @@ section {
   width: 100%; /* Gambar menyesuaikan dengan kontainer */
   height: auto; /* Pertahankan rasio gambar */
   border: 2px solid var(--text-color);
+  border-radius: 10px;
 }
 
 /* Tombol Navigasi */
@@ -549,6 +550,144 @@ textarea.user-input {
   font-weight: 500;
 }
 
+.product-gallery {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.product-item-galery {
+  background-color: #fff;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item-galery img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item-galery h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-item-galery p {
+  font-size: 16px;
+  color: #666;
+}
+
+.product-item-galery:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+/* Deskripsi */
+.Container-deskripsi{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 50px;
+}
+.Deskripsi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.image-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px; /* Jarak antar gambar */
+}
+
+.image-wrapper img {
+  width: 150px; /* Ukuran default gambar */
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+}
+
+.image-wrapper .center-img {
+  transform: scale(1.2); /* Perbesar gambar tengah */
+  z-index: 1; /* Letakkan di depan */
+  position: relative;
+}
+
+.image-wrapper .left-img,
+.image-wrapper .right-img {
+  transform: scale(1); /* Ukuran normal untuk gambar kiri/kanan */
+  z-index: 0; /* Letakkan di belakang */
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.3); /* Perbesar saat hover */
+  z-index: 2; /* Bawa ke depan saat hover */
+}
+/* Categoris */
+
+.categories-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 80%;
+  background-color: #fff;
+}
+
+.categories-menu {
+  flex: 1;
+  text-align: left;
+  padding: 2rem;
+}
+.categories-menu p{
+  font-weight: 200;
+  text-align: flex;
+  color:#444;
+  padding-bottom: 1rem;
+}
+.categories-menu h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.categories-menu a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #d91b8e;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.categories-menu a:hover{
+  color: var(--bg-color);
+  background-color: var(--main-color);
+}
+
 @media (max-width: 1080px) {
   html {
     font-size: 75%;
@@ -592,7 +731,7 @@ textarea.user-input {
     max-width: 100%;
     padding-top: 100px;
   }
-
+  
   .gambar img {
     width: 100%;
   }
