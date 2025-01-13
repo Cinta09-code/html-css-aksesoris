@@ -71,6 +71,7 @@ section {
   color: var(--text-color);
   font-weight: 100;
   padding: 5px 10px;
+  font-size: 1.3rem;
 }
 
 .navbar-menu a:hover {
@@ -98,7 +99,7 @@ section {
 #chat-icon i,
 #user-icon i,
 #truck-icon {
-  font-size: 24px;
+  font-size: 30px;
   color: var(--text-color);
   cursor: pointer;
 }

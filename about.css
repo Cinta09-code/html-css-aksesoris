@@ -128,6 +128,7 @@ section {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 100;
+  font-size: 1.3rem;
   padding: 5px 10px;
 }
 
@@ -156,7 +157,7 @@ section {
 #chat-icon i,
 #user-icon i,
 #truck-icon {
-  font-size: 24px;
+  font-size: 30px;
   color: var(--text-color);
   cursor: pointer;
 }
@@ -582,7 +583,9 @@ textarea.user-input {
   font-size: 1.2rem;
   cursor: pointer;
 }
-
+.container-video {
+  padding-top: 90px;
+}
 
 @media (max-width: 1080px) {
   html {
@@ -639,11 +642,6 @@ textarea.user-input {
   }
   #menu-icon {
     display: inline-block;
-  }
-  .container {
-    margin: auto;
-    width: 100%;
-    padding: 30px;
   }
   .container-video {
     padding-top: 150px;
