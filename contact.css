@@ -447,7 +447,7 @@ form button:hover {
 }
 
 .footer .footer-item {
-  width: 20%;
+  width: 30%;
 }
 
 .footer .footer-item h3 {
@@ -480,7 +480,6 @@ form button:hover {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
-
 @media screen and (max-width: 758px) {
   html {
     font-size: 75%;

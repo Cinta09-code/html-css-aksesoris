@@ -930,6 +930,7 @@ textarea.user-input {
   color: var(--text-color);
   font-weight: 500;
 }
+
 /* Footer */
 .footer {
   border-top: 2px solid var(--shadow-color);
@@ -977,7 +978,6 @@ textarea.user-input {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
-
 
 /* Review Section */
 .review-section {

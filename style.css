@@ -208,7 +208,7 @@ section {
 /* Tombol Navigasi */
 .navigation {
   position: absolute;
-  top: 50%;
+  top: 60%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -872,10 +872,12 @@ textarea.user-input {
   margin: 5px 0;
 }
 /* Footer */
+
+/* Footer */
 .footer {
   border-top: 2px solid var(--shadow-color);
   color: var(--text-color);
-  padding: 20px 0px 10px; 
+  padding: 20px 10px;
 }
 
 .footer .footer-content {
