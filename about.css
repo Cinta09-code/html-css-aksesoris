@@ -75,9 +75,9 @@ section {
   font-size: 1.1em;
 }
 .decorative-frame {
-  padding: 15px;
+  padding: 10px;
   border-radius: 25px;
-  background: linear-gradient rgb(199, 91, 122);
+  background: linear-gradient(rgb(199, 91, 122, 0.8), rgba(120, 106, 110, 0.8)), url(gambar/bgvideo.jpg);
   border: 6px solid var(--text-color);
   box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
   position: relative;
@@ -111,15 +111,17 @@ section {
   position: relative;
 }
 .video-container video {
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 6000px;
   border-radius: 15px;
+  border: 2px inset var(--text-color)
 }
 .video-description {
   margin-top: 1em;
   font-size: 1.2em;
   color: #555;
   line-height: 1.5;
+  font-weight: 400;
   font-style: italic;
 }
 .navbar-menu {
@@ -430,39 +432,6 @@ textarea.user-input {
   padding-top: 10px;
 }
 
-.product-item-galery {
-  background-color: #fff;
-  border: 1px solid var(--text-color);
-  border-radius: 8px;
-  padding: 10px;
-  height: 150px;
-  text-align: center;
-  width: 150px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item-galery img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product-item-galery h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.product-item-galery p {
-  font-size: 16px;
-  color: #666;
-}
-
-.product-item-galery:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
 /* shop content */
 .shop-content {
   display: grid;
@@ -579,55 +548,84 @@ textarea.user-input {
 .container--instagram:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-.Container-deskripsi {
+}/* Keunggulan Section */
+.keunggulan {
   display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 20px;
+  justify-content: space-between; /* Mengatur jarak antar elemen */
+  align-items: flex-start; /* Mengatur keselarasan vertikal */
+  gap: 20px; /* Menambahkan jarak antar elemen */
+  flex-wrap: wrap; /* Agar elemen bisa berjejer dengan baik di layar kecil */
   padding: 20px;
-  width: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 50px;
-}
-.Deskripsi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 10px; /* Jarak antar gambar */
 }
 
-.image-wrapper img {
-  width: 150px; /* Ukuran default gambar */
-  transition: transform 0.3s ease, z-index 0.3s ease;
+/* Container untuk setiap elemen keunggulan */
+.keunggulan-container {
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0; /* Agar elemen tidak terlihat sebelum animasi */
+  transform: translateY(30px); /* Menyiapkan posisi awal dari bawah */
+  animation: fadeInSlide 1s ease-in-out forwards; /* Menambahkan animasi fade dan slide */
+  animation-delay: 0.2s; /* Memberikan jeda antara setiap elemen */
+}
+
+/* Animasi fadeInSlide (muncul dengan geseran dari bawah) */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling untuk konten keunggulan */
+.keunggulan-content {
+  padding: 30px;
+  max-width: 300px;
+  border: 2px outset;
+  border-radius: 10px;
+  opacity: 0; /* Agar elemen tidak terlihat sebelum animasi */
+  animation: fadeInSlide 1s ease-in-out forwards; /* Animasi muncul dan slide */
+}
+
+/* Hover efek pada keunggulan-content */
+.keunggulan-content:hover {
+  border: solid var(--text-color); /* Mengubah border saat hover */
+}
+
+/* Gambar dalam keunggulan-content */
+.keunggulan-content img {
   border-radius: 10px;
   border: 2px solid var(--text-color);
+  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
 }
 
-.image-wrapper .center-img {
-  transform: scale(1.2); /* Perbesar gambar tengah */
-  z-index: 1; /* Letakkan di depan */
-  position: relative;
+/* Hover efek pada gambar */
+.keunggulan-content img:hover {
+  transform: scale(1.05); /* Zoom-in gambar saat hover */
 }
 
-.image-wrapper .left-img,
-.image-wrapper .right-img {
-  transform: scale(1); /* Ukuran normal untuk gambar kiri/kanan */
-  z-index: 0; /* Letakkan di belakang */
+/* Styling untuk judul h2 */
+.keunggulan-content h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  background-color: #faeef7;
+  padding: 10px;
 }
 
-.image-wrapper img:hover {
-  transform: scale(1.3); /* Perbesar saat hover */
-  z-index: 2; /* Bawa ke depan saat hover */
+/* Styling untuk paragraf p */
+.keunggulan-content p {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1rem;
+  cursor: pointer;
 }
+
 
 @media (max-width: 1080px) {
   html {
@@ -710,4 +708,78 @@ textarea.user-input {
   .container.instagram::-webkit-scrollbar {
     display: none;
   }
+}
+/* About */
+/* Animasi untuk fade-in efek */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animasi untuk slide-in gambar dan teks */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInImage {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInText {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.about{
+  padding-top: 30px;
+}
+.about-container{
+  border: 3px inset ;
+  padding: 20px;
+  border-radius: 20px;
+  opacity: 0; /* Menyembunyikan konten di awal */
+  animation: fadeIn 1s forwards; /* Menambahkan animasi fade-in */
+}
+.about-content {
+  display: flex; /* Menggunakan Flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  justify-content: space-between; /* Memberikan jarak antara gambar dan teks */
+  flex-direction: row-reverse;
+  opacity: 0; /* Menyembunyikan konten di awal */
+  animation: slideIn 1s ease-out 0.5s forwards; /* Menambahkan animasi slide-in */
+}
+
+.about-content img {
+  max-width: 45%; /* Mengatur lebar gambar agar tidak terlalu besar */
+  height: auto; /* Menjaga proporsi gambar */
+  opacity: 0; /* Menyembunyikan gambar di awal */
+  animation: slideInImage 1s ease-out 1s forwards; /* Animasi gambar muncul */
+  border-radius: 25px;
+  border: 2px solid var(--text-color);
+}
+
+.about-content p {
+  max-width: 50%; /* Mengatur lebar teks agar tidak terlalu lebar */
+  line-height: 1.6; /* Mengatur jarak antar baris teks */
+  opacity: 0; /* Menyembunyikan teks di awal */
+  animation: slideInText 1s ease-out 1s forwards; /* Animasi teks muncul */
 }

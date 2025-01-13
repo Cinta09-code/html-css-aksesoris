@@ -49,7 +49,7 @@ header {
   border-radius: 100%;
 }
 .container {
-  max-width: 1068px;
+  max-width: 1268px;
   margin: auto;
   width: 100%;
 }
@@ -480,12 +480,77 @@ textarea.user-input {
 }
 
 /* shop content */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.shop.container {
+  opacity: 0; /* Awal tidak terlihat */
+  animation: fadeInZoom 1s ease-out forwards;
+}
 .shop-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   border-radius: 4px;
+  opacity: 0; /* Awal tidak terlihat */
+  transform: scale(0.9); /* Awal lebih kecil */
+  animation: fadeInZoom 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s); /* Delay berdasarkan urutan */
 }
+.shop-content .product-box:nth-child(1) { --i: 1; }
+.shop-content .product-box:nth-child(2) { --i: 2; }
+.shop-content .product-box:nth-child(3) { --i: 3; }
+.shop-content .product-box:nth-child(4) { --i: 4; }
+.shop-content .product-box:nth-child(5) { --i: 5; }
+.shop-content .product-box:nth-child(6) { --i: 6; }
+.shop-content .product-box:nth-child(7) { --i: 7; }
+.shop-content .product-box:nth-child(8) { --i: 8; }
+.shop-content .product-box:nth-child(9) { --i: 9; }
+.shop-content .product-box:nth-child(10) { --i: 10; }
+.shop-content .product-box:nth-child(11) { --i: 11; }
+.shop-content .product-box:nth-child(12) { --i: 12; }
+.shop-content .product-box:nth-child(13) { --i: 13; }
+.shop-content .product-box:nth-child(14) { --i: 14; }
+.shop-content .product-box:nth-child(15) { --i: 15; }
+.shop-content .product-box:nth-child(16) { --i: 16; }
+.shop-content .product-box:nth-child(17) { --i: 17; }
+.shop-content .product-box:nth-child(18) { --i: 18; }
+.shop-content .product-box:nth-child(19) { --i: 19; }
+.shop-content .product-box:nth-child(20) { --i: 20; }
+.shop-content .product-box:nth-child(21) { --i: 21; }
+.shop-content .product-box:nth-child(22) { --i: 22; }
+.shop-content .product-box:nth-child(23) { --i: 23; }
+.shop-content .product-box:nth-child(24) { --i: 24; }
+.shop-content .product-box:nth-child(25) { --i: 25; }
+.shop-content .product-box:nth-child(26) { --i: 26; }
+.shop-content .product-box:nth-child(27) { --i: 27; }
+.shop-content .product-box:nth-child(28) { --i: 28; }
+.shop-content .product-box:nth-child(29) { --i: 29; }
+.shop-content .product-box:nth-child(30) { --i: 30; }
+.shop-content .product-box:nth-child(31) { --i: 31; }
+.shop-content .product-box:nth-child(32) { --i: 32; }
+.shop-content .product-box:nth-child(33) { --i: 33; }
+.shop-content .product-box:nth-child(34) { --i: 34; }
+.shop-content .product-box:nth-child(35) { --i: 35; }
+.shop-content .product-box:nth-child(36) { --i: 36; }
+.shop-content .product-box:nth-child(37) { --i: 37; }
+.shop-content .product-box:nth-child(38) { --i: 38; }
+.shop-content .product-box:nth-child(39) { --i: 39; }
+.shop-content .product-box:nth-child(40) { --i: 40; }
+.shop-content .product-box:nth-child(41) { --i: 41; }
+.shop-content .product-box:nth-child(42) { --i: 42; }
+.shop-content .product-box:nth-child(43) { --i: 43; }
+.shop-content .product-box:nth-child(44) { --i: 44; }
+.shop-content .product-box:nth-child(45) { --i: 45; }
+.shop-content .product-box:nth-child(46) { --i: 46; }
+.shop-content .product-box:nth-child(47) { --i: 47; }
 
 .product-box {
   position: relative;
@@ -493,6 +558,10 @@ textarea.user-input {
   flex: 0 0 auto;
   width: 100%;
   box-sizing: border-box;
+  opacity: 0; /* Awal tidak terlihat */
+  transform: scale(0.9); /* Awal lebih kecil */
+  animation: fadeInZoom 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s); /* Delay berdasarkan urutan */
 }
 .product-box:hover {
   padding: 10px;
@@ -519,17 +588,54 @@ textarea.user-input {
   font-size: 14px;
   margin: 5px 0;
 }
+.container-wrapper {
+  display: flex;
+  justify-content: space-between; /* Memberikan jarak antar kedua container */
+  gap: 20px; /* Opsional, memberi jarak tambahan antar container */
+  flex-wrap: wrap; /* Agar elemen bisa menyesuaikan di layar kecil */
+  padding: 20px;
+}
+
+/* Styling untuk container pertama */
 .container-items {
+  width: 48%; /* Sesuaikan lebar sesuai kebutuhan */
   border-radius: 10px;
   border: 2px solid var(--text-color);
   padding-top: 1px;
   background-image: url("gambar/bg.jpg");
+  background-size: cover; /* Menyesuaikan ukuran background */
+  background-position: center; /* Menempatkan background di tengah */
+  opacity: 0; /* Awalnya tidak terlihat */
+  transform: translateY(30px); /* Posisi awal dari bawah */
+  animation: fadeInUp 1s ease-in-out forwards; /* Menambahkan animasi */
+  animation-delay: 0.3s; /* Memberikan jeda agar muncul bertahap */
 }
+
+/* Styling untuk container kedua */
 .container-items1 {
+  width: 48%; /* Sesuaikan lebar sesuai kebutuhan */
   border-radius: 10px;
   border: 2px solid var(--text-color);
   padding-top: 1px;
   background-image: url("gambar/bg2.jpg");
+  background-size: cover; /* Menyesuaikan ukuran background */
+  background-position: center; /* Menempatkan background di tengah */
+  opacity: 0; /* Awalnya tidak terlihat */
+  transform: translateY(30px); /* Posisi awal dari bawah */
+  animation: fadeInUp 1s ease-in-out forwards; /* Menambahkan animasi */
+  animation-delay: 0.6s; /* Memberikan jeda agar muncul bertahap */
+}
+
+/* Animasi Fade-in dan Slide-up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Mulai dari bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Bergerak ke posisi normal */
+  }
 }
 
 /* Media untuk layar lebih besar (misalnya desktop) */
@@ -871,3 +977,110 @@ textarea.user-input {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
+
+
+/* Review Section */
+.review-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-user {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.review-rating {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffbf00;
+}
+
+/* Add Review Form */
+.add-review {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-review h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.add-review form input,
+.add-review form textarea,
+.add-review form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-review form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-review form button {
+  background-color: var(--text-color);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-review form button:hover {
+  background-color: var(--main-color);
+}
+

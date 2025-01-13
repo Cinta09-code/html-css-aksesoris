@@ -20,6 +20,8 @@ const userAddress = document.getElementById("user-address");
 const slider = document.getElementById('slider');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
+const audioElement = document.getElementById('audioElement');
+const musicButton = document.getElementById('musicButton');
 
 let currentIndex = 0;
 const slides = document.querySelectorAll('.gambar img'); // Semua gambar
@@ -51,6 +53,15 @@ if (document.readyState == "loading") {
 } else {
   ready();
 }
+musicButton.addEventListener('click', () => {
+  if (audioElement.paused) {
+    audioElement.play(); // Memutar audio
+    musicButton.classList.replace( 'bx-volume-mute', 'bx-music'); // Ubah ikon ke mute
+  } else {
+    audioElement.pause(); // Menghentikan audio
+    musicButton.classList.replace('bx-music', 'bx-volume-mute'); // Ubah ikon ke music
+  }
+});
 // Fungsi untuk mengubah posisi slider
 function updateSliderPosition() {
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;

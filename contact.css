@@ -48,7 +48,7 @@ header {
   border-radius: 100%;
 }
 .container {
-  max-width: 1068px;
+  max-width: 1268px;
   margin: auto;
   width: 100%;
 }
@@ -447,7 +447,7 @@ form button:hover {
 }
 
 .footer .footer-item {
-  width: 30%;
+  width: 20%;
 }
 
 .footer .footer-item h3 {

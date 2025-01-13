@@ -16,10 +16,7 @@
   <body>
     <!-- Header -->
     <header>
-      <audio autoplay loop>
-        <source src="audio/home.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
+      <audio id="audioElement" src="audio/home.mp3" loop></audio>
       <!-- Navbar -->
       <div class="nav container">
         <a href="" class="logo"><img src="gambar/logo.png" alt="" /></a>
@@ -35,7 +32,8 @@
           <a href="#" id="menu-icon"><i class="bx bx-menu"></i></a>
           <a href="#" id="cart-icon"><i class="bx bxs-cart"></i></a>
           <a href="#" id="user-icon"><i class="bx bxs-user-circle"></i></a>
-          <a href="order.html" id="truck-icon"><i class="bx bxs-truck"></i></a>
+          <i class="bx bx-music music-button" id="musicButton"></i>
+
         </div>
         <!-- Cart -->
         <div class="cart">
@@ -102,7 +100,7 @@
         </form>
       </div>
     </header>
-    <section class="shop container">
+    <section class="slider container">
       <div class="slider-container">
         <div class="slider" id="slider">
           <div class="gambar">
@@ -120,26 +118,24 @@
           </button>
         </div>
       </div>
+    </section>
       <section class="container Deskripsi">
         <div class="Container-deskripsi">
           <div class="image-wrapper">
-            <img src="gambar/galeri1.jpeg" alt="Gambar Kiri" class="left-img" />
-            <img src="gambar/galeri2.jpeg" alt="Gambar Tengah" class="center-img" />
-            <img src="gambar/galeri3.jpeg" alt="Gambar Kanan" class="right-img" />
+            <img src="gambar/galeri1.jpeg" alt="Gambar Kiri" class="left-img">
+            <img src="gambar/galeri2.jpeg" alt="Gambar Tengah" class="center-img">
+            <img src="gambar/galeri3.jpeg" alt="Gambar Kanan" class="right-img">
           </div>
           <div class="categories-menu">
             <h2>Categories</h2>
             <p>
-            Selamat datang di LittleBelle.PNK! Kami menyediakan koleksi
-            perhiasan berkualitas tinggi, seperti kalung,
-            gelang,tas,kacamata,jam,cincin dan masih banyak lagi lainnya
-            dengan desain eksklusif. Temukan keindahan dalam setiap detail.
+            Welcome to LittleBelle.PNK! We provide a collection of high-quality jewelry, such as necklaces, bracelets, bags, glasses, watches, rings and many more with exclusive designs. Find beauty in every detail.
           </p>
             <a href="category.html">View all</a>
           </div>
         </div>
       </section>
-      <!-- content -->
+    <section class="shop container">
       <h2 class="section-title">Shop Products</h2>
       <br />
       <div class="shop-content">
@@ -199,14 +195,110 @@
           <span class="price">Rp 165.000</span>
           <i class="bx bxs-shopping-bag add-cart"></i>
         </div>
+         <!-- box 13 -->
+         <div class="product-box" data-category="Kalung">
+          <img src="gambar/img13.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Clover</h2>
+          <span class="price">Rp59.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 14 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img14.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Kupu</h2>
+          <span class="price">Rp 54.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 15 -->
+        <div class="product-box" data-category="Kalung">
+          <img src="gambar/img15.jpg" alt="" class="product-img" />
+          <h2 class="product-title">Kalung Titanium Pita</h2>
+          <span class="price">Rp 58.000</span>
+          <i class="bx bxs-shopping-bag add-cart"></i>
+        </div>
+          <!-- box 16 -->
+          <div class="product-box" data-category="Kalung">
+            <img src="gambar/img16.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Kalung Titanium Infinity</h2>
+            <span class="price">Rp 57.000</span>
+            <i class="bx bxs-shopping-bag add-cart"></i>
+          </div>
+          <!-- box 17 -->
+          <div class="product-box" data-category="Gelang">
+            <img src="gambar/img17.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Jam Serut Kotak Silver</h2>
+            <span class="price">Rp 56.000</span>
+            <i class="bx bxs-shopping-bag add-cart"></i>
+          </div>
+          <!-- box 18 -->
+          <div class="product-box" data-category="Gelang">
+            <img src="gambar/img18.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Jam Serut Kotak Gold</h2>
+            <span class="price">Rp 56.000</span>
+            <i class="bx bxs-shopping-bag add-cart"></i>
+          </div>
+          <!-- box 19 -->
+          <div class="product-box" data-category="Gelang">
+            <img src="gambar/img19.jpg" alt="" class="product-img" />
+            <h2 class="product-title">Jam Serut Lingkaran Gold</h2>
+            <span class="price">Rp 56.000</span>
+            <i class="bx bxs-shopping-bag add-cart"></i>
+          </div>
     </section>
     <section class="container">
+
+      <section class="review-section container">
+        <h3>Customer Reviews</h3>
+        <div class="reviews">
+          <div class="review">
+            <p class="review-user">Shinta Aulia Pasha</p>
+            <p class="review-text">"Produk sangat bagus, kualitasnya luar biasa! Saya suka desainnya, sangat elegan."</p>
+            <p class="review-rating">⭐⭐⭐⭐⭐</p>
+          </div>
+          <div class="review">
+            <p class="review-user">Nur Puspa Rini</p>
+            <p class="review-text">"Pengiriman cepat dan produk sesuai dengan deskripsi. Recomended!"</p>
+            <p class="review-rating">⭐⭐⭐⭐</p>
+          </div>
+          <div class="review">
+            <p class="review-user">Miranda Putri</p>
+            <p class="review-text">"Pengiriman cepat dan produk terlihat sangat elegant!!!"</p>
+            <p class="review-rating">⭐⭐⭐⭐</p>
+          </div>
+          <!-- Add more reviews here -->
+        </div>
+        
+        <!-- Add Review Form -->
+        <div class="add-review">
+          <h4>Leave a Review</h4>
+          <form action="#" method="post">
+            <label for="user-name">Your Name:</label>
+            <input type="text" id="user-name" name="user-name" required />
+            
+            <label for="review-text">Your Review:</label>
+            <textarea id="review-text" name="review-text" required></textarea>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+            
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Footer -->
       <footer class="footer container">
         <div class="footer-content">
           <div class="footer-item">
             <h3>LittleBelle</h3>
-            <p>Perhiasan berkualitas tinggi dengan desain eksklusif.</p>
+            <p>High quality jewelry with exclusive designs.</p>
           </div>
           <div class="footer-item">
             <h3>Menu</h3>
@@ -218,7 +310,16 @@
             </ul>
           </div>
           <div class="footer-item">
-            <h3>Kontak Kami</h3>
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="#">Bag</a></li>
+              <li><a href="#">Bracelets and watches</a></li>
+              <li><a href="#">Necklace</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h3>Contact us</h3>
             <ul>
               <li>
                 📍 Jl. Reformasi Untan Sebrang Indomaret, Pontianak, Indonesia

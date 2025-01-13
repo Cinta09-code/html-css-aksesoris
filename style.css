@@ -49,7 +49,7 @@ header {
   border-radius: 100%;
 }
 .container {
-  max-width: 1068px;
+  max-width: 1268px;
   margin: auto;
   width: 100%;
 }
@@ -172,6 +172,9 @@ section {
   display: none;
 }
 /* Slider Container */
+.slider{
+  padding-top: 60px;
+}
 .slider-container {
   position: relative;
   width: 100%;
@@ -514,6 +517,20 @@ textarea.user-input {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 /* shop content */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.shop.container {
+  opacity: 0; /* Awal tidak terlihat */
+  animation: fadeInZoom 1s ease-out forwards;
+}
 .shop{
   padding-top: 95px;
 }
@@ -522,11 +539,19 @@ textarea.user-input {
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   gap: 1.5rem;
   border-radius: 4px;
+  opacity: 0; /* Awal tidak terlihat */
+  transform: scale(0.9); /* Awal lebih kecil */
+  animation: fadeInZoom 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s); /* Delay berdasarkan urutan */
 }
 .product-box {
   position: relative;
   border-radius: 5px;
   border-radius: 4px;
+  opacity: 0; /* Awal tidak terlihat */
+  transform: scale(0.9); /* Awal lebih kecil */
+  animation: fadeInZoom 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.2s); /* Delay berdasarkan urutan */
 }
 .product-box:hover {
   padding: 10px;
@@ -534,6 +559,24 @@ textarea.user-input {
   transition: 0.4s;
   border-radius: 4px;
 }
+.shop-content .product-box:nth-child(1) { --i: 1; }
+.shop-content .product-box:nth-child(2) { --i: 2; }
+.shop-content .product-box:nth-child(3) { --i: 3; }
+.shop-content .product-box:nth-child(4) { --i: 4; }
+.shop-content .product-box:nth-child(5) { --i: 5; }
+.shop-content .product-box:nth-child(6) { --i: 6; }
+.shop-content .product-box:nth-child(7) { --i: 7; }
+.shop-content .product-box:nth-child(8) { --i: 8; }
+.shop-content .product-box:nth-child(9) { --i: 9; }
+.shop-content .product-box:nth-child(10) { --i: 10; }
+.shop-content .product-box:nth-child(11) { --i: 11; }
+.shop-content .product-box:nth-child(12) { --i: 12; }
+.shop-content .product-box:nth-child(13) { --i: 13; }
+.shop-content .product-box:nth-child(14) { --i: 14; }
+.shop-content .product-box:nth-child(15) { --i: 15; }
+.shop-content .product-box:nth-child(16) { --i: 16; }
+.shop-content .product-box:nth-child(17) { --i: 17; }
+
 .product-img {
   width: 100%;
   height: auto;
@@ -592,6 +635,36 @@ textarea.user-input {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 /* Deskripsi */
+/* Keyframes untuk animasi muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi ke elemen */
+.container.Deskripsi {
+  opacity: 0; /* Awal tidak terlihat */
+  animation: fadeIn 1s ease-out forwards; /* Animasi muncul */
+}
+
+.Container-deskripsi {
+  opacity: 0; /* Awal tidak terlihat */
+  animation: fadeIn 1.2s ease-out forwards; /* Tambahkan delay */
+}
+
+.Container-deskripsi .categories-menu {
+  opacity: 0; /* Awal tidak terlihat */
+  animation: fadeIn 1.4s ease-out forwards; /* Tambahkan delay */
+}
+.Deskripsi{
+  padding-top: 0;
+}
 .Container-deskripsi{
   display: flex;
   align-items: center;
@@ -653,15 +726,16 @@ textarea.user-input {
 }
 
 .categories-menu {
-  flex: 1;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
 }
 .categories-menu p{
   font-weight: 200;
+  font-size: 20px;
   text-align: flex;
   color:#444;
   padding-bottom: 1rem;
+  word-spacing: 1.5px;
 }
 .categories-menu h2 {
   font-size: 2rem;
@@ -801,7 +875,7 @@ textarea.user-input {
 .footer {
   border-top: 2px solid var(--shadow-color);
   color: var(--text-color);
-  padding: 20px 10px;
+  padding: 20px 0px 10px; 
 }
 
 .footer .footer-content {
@@ -844,3 +918,120 @@ textarea.user-input {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
+.music-button {
+  font-size: 25px;
+  color:var(--text-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.music-button:hover {
+  color: var(--main-color);
+}
+
+
+/* Review Section */
+.review-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-user {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.review-rating {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffbf00;
+}
+
+/* Add Review Form */
+.add-review {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-review h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.add-review form input,
+.add-review form textarea,
+.add-review form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-review form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-review form button {
+  background-color: var(--text-color);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-review form button:hover {
+  background-color: var(--main-color);
+}
+
